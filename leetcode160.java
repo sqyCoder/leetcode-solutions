@@ -15,6 +15,8 @@ public class leetcode160 {
         ListNode cura = headA;
         ListNode curb = headB;
         int counta = 0;
+
+
         int countb = 0;
 
         while (cura != null) {
