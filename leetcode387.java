@@ -1,4 +1,4 @@
-class Solution {
+class leetcode572 {
     public int firstUniqChar(String s) {
         int[] count = new int[128];
         for (char c : s.toCharArray()) {
