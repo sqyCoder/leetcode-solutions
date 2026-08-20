@@ -9,15 +9,15 @@
  */
 class leetcode236 {
     //成员变量，用来保存找到的最近公共祖先
-    private TreeNode lca = null;
+    private TreeNode lc = null;
 
     public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
         //每次调用方法，先把答案置null，防止上一组测试数据残留
-        lca = null;
+        lc = null;
         //调用布尔型的递归辅助函数，去遍历整棵树
         lowestCommonAncestorHelper(root, p, q);
         //递归跑完之后 lca里面就存好了答案，直接返回
-        return lca;
+        return lc;
     }
 
     /**
@@ -42,7 +42,7 @@ class leetcode236 {
         //三块里面加起来等于2，说明p和q两个全部出现在这棵子树内
         //而且现在这个root，就是它们的汇合点，就是最近公共祖先
         if(left + right + mid == 2){
-            lca = root;
+            lc = root;
         }
 
         //向上层反馈消息：只要左、右、自己任意一处找到p/q，就返回true
